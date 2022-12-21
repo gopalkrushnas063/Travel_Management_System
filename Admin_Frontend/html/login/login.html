@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Venture Trip | Signup</title>
-    <link rel="stylesheet" href="/Admin_Frontend/css/signup.css">
+    <link rel="stylesheet" href="/Admin_Frontend/css/login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
@@ -17,7 +17,7 @@
         <div>
             <a href="/Admin_Frontend/index.html">Home</a>
             <a href="#contact">Contact</a>
-            <a href="/Admin_Frontend/html/login/login.html">Login</a>
+            <a href="#about">Login</a>
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                 <i class="fa fa-bars"></i>
             </a>
@@ -26,20 +26,14 @@
     </div>
 
     <div id="box">
-        <form action="" id="signupForm">
+        <form action="" id="loginForm">
             <div id="logo">
                 <img src="/Admin_Frontend/Images/logo1.png" alt="">
             </div>
-            <h1>Sign Up</h1>
-            <label for="">Full name </label>
-
-            <input type="text" id="name" name="adminName" placeholder="Enter your full name">
+            <h1>Login</h1>
 
             <label for="">Mobile Number </label>
             <input type="tel" id="mobile" name="adminMobile" placeholder="Enter your mobile number">
-
-            <label for="">Email</label>
-            <input type="email" id="email" name="adminEmail" placeholder="Enter email">
 
             <label for="">Enter password</label>
             <input type="password" id="password" name="adminPassword" placeholder="Enter password">
@@ -47,15 +41,15 @@
             <p>By signining up , I accept the Venture Trip <a href="">Terms of Services</a> and acknowledge the <a
                     href="">Privacy Policy</a> </p>
 
-            <input type="submit" id="submit" value="Signup">
+            <input type="submit" id="submit" value="Login">
 
-            <p>Already have an account? <a href="/Admin_Frontend/html/login/login.html">Sign In</a></p>
+            <p>Already have an account? <a href="/Admin_Frontend/html/signup/signup.html">Sign In</a></p>
         </form>
     </div>
 </body>
 
 </html>
-<script src="/Admin_Frontend/JavaScript/signup.js"></script>
+<script src="/Admin_Frontend/JavaScript/login.js"></script>
 <script>
     function myFunction() {
         var x = document.getElementById("myTopnav");
