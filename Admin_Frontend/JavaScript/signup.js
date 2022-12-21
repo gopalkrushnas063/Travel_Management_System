@@ -7,8 +7,8 @@ const postSignupFetch = async () => {
     event.preventDefault();
     let uName = document.getElementById("name").value;
     let uMobile = document.getElementById("mobile").value;
-    let uEmail = document.getElementById("mail").value;
-    let uPassword = document.getElementById("pwd").value;
+    let uEmail = document.getElementById("email").value;
+    let uPassword = document.getElementById("password").value;
 
     let response = await fetch(
         `http://localhost:8088/login/registerAdmin`, {
@@ -20,9 +20,9 @@ const postSignupFetch = async () => {
 
         body: JSON.stringify({
             adminName: uName,
-            mail: uEmail,
+            email: uEmail,
             mobile: uMobile,
-            pwd: uPassword
+            password: uPassword
         })
     })
 
