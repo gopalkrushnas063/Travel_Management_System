@@ -138,8 +138,9 @@
               <a href="#contact" class="navbar-link" data-nav-link>contact us</a>
             </li>
             <li>
-                <a href="/Admin_Frontend/html/login/login.html" class="navbar-link" data-nav-link>Login</a>
-              </li>
+              <a onclick="logoutFun()" id="logout" href="/Admin_Frontend/html/login/login.html" class="navbar-link"
+                data-nav-link>Logout</a>
+            </li>
 
           </ul>
 
@@ -831,8 +832,33 @@
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-  <script src="/Admin_Frontend/JavaScript/index.js"></script>
+  <!-- <script src="../Admin_Frontend/JavaScript/index.js"></script> -->
 
 </body>
 
 </html>
+
+
+<script>
+
+  let logoutFun = async () => {
+    let uuid = prompt("Enter Session UUID");
+    if (uuid.length > 0) {
+      let response = await fetch(`http://localhost:8088/login/adminlogout?key=${uuid}`, {
+        method: 'PATCH'
+      }).catch(err => {
+        console.log(err);
+      })
+      if (response.ok) {
+        alert("Logged Out Successfully!");
+        localStorage.setItem("AdminLoggedIn", false);
+        window.location = "../index.html";
+      } else {
+        let res = await response.json();
+        alert(res.message);
+      }
+    } else {
+      alert("Please Enter UUID!");
+    }
+  }
+</script>

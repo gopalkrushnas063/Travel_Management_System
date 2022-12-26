@@ -22,7 +22,7 @@ const postLoginFetch = async () => {
         let res = await response.json();
         alert("Login Successfully! Please Note This UUID " + res.uuid);
         localStorage.setItem("AdminLoggedIn", true);
-        window.location = "/Admin_Frontend/index.html";
+        window.location = "/Admin_Frontend/logout_index.html";
     } else {
         let res = await response.json();
         alert(res.message);

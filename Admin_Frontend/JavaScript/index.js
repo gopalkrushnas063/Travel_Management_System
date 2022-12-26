@@ -9,7 +9,7 @@ let logoutFun = async () => {
         if (response.ok) {
             alert("Logged Out Successfully!");
             localStorage.setItem("AdminLoggedIn", false);
-            window.location = "/Admin_Frontend/login_index.html";
+            window.location = "../index.html";
         } else {
             let res = await response.json();
             alert(res.message);
