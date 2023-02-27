@@ -29,7 +29,7 @@ const postSignupFetch = async () => {
     if (response.ok) {
         signup.reset();
         alert("Admin Saved Successfully!");
-        window.location = "../index.html";
+        window.location = "/Admin_Frontend/logout_index.html";
     } else {
         let res = await response.JSON();
         alert(res.message);
